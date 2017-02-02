@@ -20,6 +20,10 @@ public class Sequence {
         yearSequenced = year;
         label = info;
     }
+    //default constructor
+    Sequence(){
+
+    }
     /*
     this will return the length of the raw nucelotide sequence
      */
