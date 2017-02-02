@@ -3,10 +3,10 @@
  */
 public class Sequence {
 
-    //fields
-    String nucleotideSequence; //raw nucleotide sequence
-    int yearSequenced; //this is the year the data was produced
-    String label; //this will hold other information/notes about the sequence
+    //fields - hint: all fields should be private (except for constants)
+    private String nucleotideSequence; //raw nucleotide sequence
+    private int yearSequenced; //this is the year the data was produced
+    private String label; //this will hold other information/notes about the sequence
 
     //methods
     /*
