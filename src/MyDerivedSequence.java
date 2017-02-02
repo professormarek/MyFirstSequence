@@ -5,5 +5,8 @@ public class MyDerivedSequence extends Sequence{
 
     public void foo(){
         getLength();
+        //notice we cannot access private members of Sequence!
+        //label = "whatever";
+        trim(1); //OK! trim is protected
     }
 }

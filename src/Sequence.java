@@ -33,7 +33,7 @@ public class Sequence {
     /*
     this chops the last n letters off of the nucleotide sequence
      */
-    void trim(int n){
+    protected void trim(int n){
         //trim the last n letters
         nucleotideSequence = nucleotideSequence.substring(0, nucleotideSequence.length() - (1+n));
     }
