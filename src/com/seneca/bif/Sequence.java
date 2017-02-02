@@ -1,3 +1,4 @@
+package com.seneca.bif;
 /**
  * This class represents a generic gene sequence and related operations
  */
@@ -14,20 +15,20 @@ public class Sequence {
     a constructor is a method (function/subroutine) whose job it is  to setup or initialize
     a new instance of our class
      */
-    Sequence(String rawSeq, int year, String info){
+    public Sequence(String rawSeq, int year, String info){
         //assign each argument to an instance variable
         nucleotideSequence = rawSeq;
         yearSequenced = year;
         label = info;
     }
     //default constructor
-    Sequence(){
+    public Sequence(){
 
     }
     /*
     this will return the length of the raw nucelotide sequence
      */
-    long getLength(){
+    public long getLength(){
         return nucleotideSequence.length();
     }
     /*
@@ -37,7 +38,7 @@ public class Sequence {
         //trim the last n letters
         nucleotideSequence = nucleotideSequence.substring(0, nucleotideSequence.length() - (1+n));
     }
-    void display(){
+    public void display(){
         System.out.println("Sequence: " + label + " sequence in year:" + yearSequenced + "Raw sequence:" + nucleotideSequence);
     }
 
