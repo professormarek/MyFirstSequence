@@ -36,10 +36,10 @@ public class Sequence {
      */
     protected void trim(int n){
         //trim the last n letters
-        nucleotideSequence = nucleotideSequence.substring(0, nucleotideSequence.length() - (1+n));
+        nucleotideSequence = nucleotideSequence.substring(0, nucleotideSequence.length() - n);
     }
     public void display(){
-        System.out.println("Sequence: " + label + " sequence in year:" + yearSequenced + "Raw sequence:" + nucleotideSequence);
+        System.out.println("Sequence: " + label + " sequence in year:" + yearSequenced + " Raw sequence:" + nucleotideSequence);
     }
 
     //for now, let's put the main function inside our Sequence class (main could also be defined elsewhere!)

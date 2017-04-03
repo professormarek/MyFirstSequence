@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import javax.swing.*;
+
 import static org.junit.Assert.*;
 
 /**
@@ -41,13 +43,25 @@ public class SequenceTest {
 
     @Test
     public void trim() throws Exception {
-        System.out.println("Running test: trim()");
+        System.out.println("Running test: trim(), initial length of testSequence is " + testSequence.getLength());
+        testSequence.trim(2);
+        long newLength = testSequence.getLength();
+        assertEquals(2, newLength);
 
     }
 
     @Test
     public void display() throws Exception {
         System.out.println("Running test: display()");
+        //this is an example of a "qualitative test" that the user will provide some judgement on
+        //perhaps use this sparingly
+
+        testSequence.display();
+
+        int result = JOptionPane.showConfirmDialog(null, "Did the Sequence data display correctly?", "TEST",
+                JOptionPane.YES_NO_OPTION);
+
+        assertEquals(JOptionPane.YES_OPTION, result);
 
     }
 
